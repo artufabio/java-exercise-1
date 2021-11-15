@@ -1,23 +1,21 @@
 package com.qa.oop_exercises.person_ex;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class PersonActions{
-	
-	public static Scanner sc = new Scanner(System.in);
 	
 	ArrayList<Person> people = new ArrayList<Person>();
 	
 	public Person createPersonIstance() {
 		Person pers = new Person();
 		System.out.println("What's their name?");
-		pers.setName(sc.nextLine());
+		MyScanner.sc.nextLine();
+		pers.setName(MyScanner.sc.nextLine());
 		System.out.println("What's their age?");
-		pers.setAge(sc.nextInt());
+		pers.setAge(MyScanner.sc.nextInt());
 		System.out.println("What's their job title?");
-		sc.nextLine();
-		pers.setJobTitle(sc.nextLine());
+		MyScanner.sc.nextLine();
+		pers.setJobTitle(MyScanner.sc.nextLine());
 		return pers;
 	}
 	
@@ -33,12 +31,12 @@ public class PersonActions{
 	
 	public Person updatePersonFromTheList(Person p){
 		System.out.println("What's their new name?");
-		p.setName(sc.nextLine());
+		p.setName(MyScanner.sc.nextLine());
 		System.out.println("What's their new age?");
-		p.setAge(sc.nextInt());
+		p.setAge(MyScanner.sc.nextInt());
 		System.out.println("What's their new job title?");
-		sc.nextLine();
-		p.setJobTitle(sc.nextLine());
+		MyScanner.sc.nextLine();
+		p.setJobTitle(MyScanner.sc.nextLine());
 		return p;
 	}
 	
