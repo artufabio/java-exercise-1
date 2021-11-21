@@ -3,21 +3,16 @@ package com.qa.oop_exercises.person_ex;
 public class Runner {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-		UserActions ua = new UserActions();
+		DbConnection dbc = new DbConnection();
 		
-		String answer;
+		AppFlow af = new AppFlow();
 		
-		do {
-			ua.createListPeople();
-			
-			ua.updateListPeople();
-			
-			System.out.println("Would you like to terminate the program? Type \"yes\" or \"no\"");
-			answer = MyScanner.sc.next();
-
-		} while(answer.equals("no"));
+		af.startAppFlow();
+		
+		dbc.close();
+		
+		MyScanner.sc.close();
 		
 		System.out.println("Program terminated.. Bye Bye!!");
 		
